@@ -18,36 +18,17 @@ class DishDetail extends Component {
         });
       }
 
-    //渲染点击Card
-    renderDish(dish) {
-        // console.log(dish)
-        if (dish != null) {
-            return(
-                <Card>
-                    <CardImg width="100%" src={dish.image} alt={dish.name} />
-                    <CardBody>
-                        <CardTitle>{dish.name}</CardTitle>
-                        <CardText>{dish.description}</CardText>
-                    </CardBody>
-                </Card>
-            )
-        }
-        else{
-            return(
-                <div></div>
-            )
-        }
-    }
+    
 
     renderComments(comments){
-        // console.log(comments)
+        
         if (comments != null) {
 
             let list = comments.map((comments)=>{
 
-                // 截取字符串
+                
                 let date = comments.date
-                // console.log(this.formatDate({date}))
+                
 
                 return(
 
@@ -78,9 +59,9 @@ class DishDetail extends Component {
 
     render(){
 
-        // console.log(this.props.dishSelect)
+        
         const {dishSelect} = this.props;
-        console.log(dishSelect);
+        
 
         return dishSelect?(
                 <div className="col-12 col-md-5 m-1">
